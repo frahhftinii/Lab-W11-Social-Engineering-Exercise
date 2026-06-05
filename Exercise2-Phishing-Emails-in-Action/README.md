@@ -324,6 +324,4 @@ Tasks Completed : 8
 Points Earned : 56
 ```
 
-## Final Screenshot
-
 <img width="722" height="428" alt="20" src="https://github.com/user-attachments/assets/c912e1e5-e325-4985-980e-174c8d05889a" />
