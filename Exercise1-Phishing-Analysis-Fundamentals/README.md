@@ -198,3 +198,13 @@ Business Email Compromise
 # Conclusion
 
 This lab provided hands-on experience in phishing analysis fundamentals. By analyzing email addresses, delivery protocols, headers, email bodies, attachments, and phishing types, I gained a better understanding of how phishing emails are investigated. The exercise also showed the importance of examining metadata, suspicious attachments, and sender information before trusting any email.
+
+# Completion Evidence
+
+```bash
+Room Status : COMPLETED
+Tasks Completed : 7
+Points Earned :112
+```
+
+<img width="742" height="457" alt="30" src="https://github.com/user-attachments/assets/fe181b35-ff5b-442c-816c-d53a2d954e43" />
