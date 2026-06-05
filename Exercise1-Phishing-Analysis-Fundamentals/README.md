@@ -2,29 +2,29 @@
 
 ## Objective
 
-The objective of this lab is to analyze phishing emails by examining email headers, email bodies, attachments, and identifying indicators of phishing attacks.
+The objective of this lab s to understand the fundamentals of phishing analysis by examining email address, email delivery methods, email headers, email bodies, attachment, and different types of phishing attacks.
 
 ---
 
-## Tools Used
-
+## Tools and Techniques Used
+## Tools
 - Mozilla Thunderbird
 - CyberChef
 - TryHackMe
-- Email Source Viewer
+
+## Techniques
+- Email Header Analysis
+- Email Metadata Analysis
+- Email Body Analysis
+- Attachment Analysis
+- Base64 Decoding
+- Phishing Investigation
 
 ---
 
-# Task 1 – Understanding Email Structure
+# Task 1 – Introduction
 
-In this task, the structure of an email was studied, including:
-
-- Header
-- Body
-- Attachments
-- Metadata
-
-### Screenshot
+his task introduced the Phishing Analysis Fundamentals room and the basic purpose of phishing email investigation.
 
 <img width="932" height="712" alt="1" src="https://github.com/user-attachments/assets/a26445ec-9bf2-425c-a3da-d80292e02a45" />
 
@@ -32,9 +32,11 @@ In this task, the structure of an email was studied, including:
 
 ---
 
-# Task 2 – Email Header Analysis
+# Task 2 – The Email Address
 
-The email headers were analyzed to identify sender information and message routing details.
+This task explained the structure of an email address and how to identify the domain from an email.
+
+### Answer
 
 ### Activities Performed
 
@@ -51,7 +53,7 @@ The email headers were analyzed to identify sender information and message routi
 
 ---
 
-# Task 3 – Email Source Investigation
+# Task 3 – Email Delivery
 
 The raw email source was inspected to understand how email messages are structured.
 
@@ -71,7 +73,7 @@ The raw email source was inspected to understand how email messages are structur
 
 ---
 
-# Task 4 – Attachment Analysis
+# Task 4 – Email Headers
 
 A suspicious attachment encoded in Base64 format was analyzed.
 
@@ -100,7 +102,7 @@ THM{BENIGN_PDF_ATTACHMENT}
 
 ---
 
-# Task 5 – Email Body Analysis
+# Task 5 – Email Body
 
 The email body was reviewed to identify common phishing indicators.
 
@@ -121,7 +123,7 @@ The email body was reviewed to identify common phishing indicators.
 
 ---
 
-# Task 6 – Types of Phishing Investigation
+# Task 6 – Types of Phishing
 
 The file **email13.eml** was analyzed to identify the phishing attempt.
 
@@ -142,7 +144,7 @@ The file **email13.eml** was analyzed to identify the phishing attempt.
 
 ---
 
-# Task 7 – Business Email Compromise (BEC)
+# Task 7 – Conclusion
 
 This task introduced Business Email Compromise (BEC), a phishing technique where attackers use compromised email accounts to deceive employees into performing fraudulent actions.
 
