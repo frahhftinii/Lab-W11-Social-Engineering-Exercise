@@ -24,7 +24,7 @@ The objective of this lab s to understand the fundamentals of phishing analysis 
 
 # Task 1 – Introduction
 
-his task introduced the Phishing Analysis Fundamentals room and the basic purpose of phishing email investigation.
+This task introduced the Phishing Analysis Fundamentals room and the basic purpose of phishing email investigation.
 
 <img width="932" height="712" alt="1" src="https://github.com/user-attachments/assets/a26445ec-9bf2-425c-a3da-d80292e02a45" />
 
@@ -36,16 +36,10 @@ his task introduced the Phishing Analysis Fundamentals room and the basic purpos
 
 This task explained the structure of an email address and how to identify the domain from an email.
 
-### Answer
-
-### Activities Performed
-
-- Examined Return-Path
-- Checked Received headers
-- Identified sender information
-- Reviewed authentication records
-
-### Screenshot
+## Answer
+```text
+tryhatme.com
+```
 
 <img width="930" height="832" alt="3" src="https://github.com/user-attachments/assets/555c6586-8458-4246-a71c-61f1b9e2fccb" />
 
@@ -55,15 +49,20 @@ This task explained the structure of an email address and how to identify the do
 
 # Task 3 – Email Delivery
 
-The raw email source was inspected to understand how email messages are structured.
+This task explained how emails are sent and received using different protocols and services.
+
+## Answer
+```text
+SMTP
+DNS
+IMAP
+```
 
 ### Findings
 
-- Header information can reveal sender details.
-- Authentication results help verify legitimacy.
-- Source code contains metadata useful for investigations.
-
-### Screenshot
+- SMTP is used to send emails from a client to a mail server.
+- DNS is used to look up the recipient domain's mail server.
+- IMAP allows users to access emails from multiple devices.
 
 <img width="943" height="842" alt="5" src="https://github.com/user-attachments/assets/9e47c9e6-bcd9-4b63-9627-84d19f958032" />
 
@@ -75,57 +74,77 @@ The raw email source was inspected to understand how email messages are structur
 
 # Task 4 – Email Headers
 
-A suspicious attachment encoded in Base64 format was analyzed.
+In this task, the raw source of email1.eml was inspected using Thunderbird. Email headers were analyzed to identify important metadata such as the subject line and originating IP address.
 
-### Steps Performed
-
-1. Opened the email source.
-2. Located the attachment section.
-3. Identified Base64 encoded data.
-4. Copied the encoded content.
-5. Decoded it using CyberChef.
-6. Recovered the attached PDF file.
-
-### Flag Obtained
-
+## Answers
 ```text
-THM{BENIGN_PDF_ATTACHMENT}
+Help protect your budget by protecting your home
+43.255.56.161
 ```
 
-### Screenshot
+### Findings
 
-<img width="957" height="226" alt="17" src="https://github.com/user-attachments/assets/b670f5f2-c629-4509-b32b-1e45388dfe49" />
+- The full subject line was identified from the email.
+- The X-Originating-IP was found in the raw email header.
+- Email headers can reveal useful forensic information about the sender and message origin.
 
-<img width="1920" height="877" alt="18" src="https://github.com/user-attachments/assets/7e39a339-09b1-4ff5-ab43-0ead5ad8f763" />
+<img width="936" height="830" alt="13" src="https://github.com/user-attachments/assets/d611719d-5762-46e5-9126-0840a87ca250" />
 
-<img width="405" height="102" alt="19" src="https://github.com/user-attachments/assets/c08c84fe-092a-4c5a-94b1-0bb464b8d383" />
+<img width="927" height="762" alt="14" src="https://github.com/user-attachments/assets/18c77be1-6902-45d4-9460-317d19ac86e1" />
+
+<img width="937" height="560" alt="15" src="https://github.com/user-attachments/assets/af9dceab-14fa-4f64-a212-3adda39e6dd8" />
+
+<img width="912" height="538" alt="10" src="https://github.com/user-attachments/assets/14c274d7-9529-432f-a476-886becee9cee" />
+
+<img width="955" height="160" alt="12" src="https://github.com/user-attachments/assets/63a0aaaa-0aef-443c-a90a-42c0a9842236" />
 
 ---
 
 # Task 5 – Email Body
 
-The email body was reviewed to identify common phishing indicators.
+In this task, email2.txt was analyzed. The email body contained an attachment encoded in Base64 format. CyberChef was used to decode the Base64 content and recover the PDF attachment.
 
-### Indicators Observed
+## Answers
+```text
+application/pdf
+zmqpalgh.pdf
+THM{BENIGN_PDF_ATTACHMENT}
+```
 
-- Urgent language
-- Social engineering techniques
-- Suspicious links
-- Potential impersonation attempts
+## Steps Performed
+1. Opened email2.txt.
+2. Identified the attachment content type as application/pdf.
+3. Identified the attachment filename as zmqpalgh.pdf.
+4. Copied the Base64 encoded attachment content.
+5. Used CyberChef to decode the Base64 data.
+6. Recovered the PDF attachment.
+7. Opened the PDF and found the flag.
 
-### Screenshot
+<img width="916" height="861" alt="20" src="https://github.com/user-attachments/assets/238907be-0944-4a35-b4dc-499b0329197b" />
 
-<img width="916" height="861" alt="20" src="https://github.com/user-attachments/assets/78e2f8fa-3377-4506-bfd4-2217d33dfe8f" />
+<img width="940" height="830" alt="21" src="https://github.com/user-attachments/assets/004bc637-5ac4-4d1e-ae84-561af0d063ef" />
 
-<img width="940" height="830" alt="21" src="https://github.com/user-attachments/assets/594f324a-c02c-4e10-b7de-798668667477" />
+<img width="928" height="662" alt="22" src="https://github.com/user-attachments/assets/e84eabf6-7eb5-4b39-9dd0-286ab1071c22" />
 
-<img width="928" height="662" alt="22" src="https://github.com/user-attachments/assets/3080a644-a666-4ba1-8ea4-3067b53ab458" />
+<img width="957" height="226" alt="17" src="https://github.com/user-attachments/assets/e98cf96b-2453-4b70-97ec-9ed37d0e3467" />
+
+<img width="1920" height="877" alt="18" src="https://github.com/user-attachments/assets/2a9f9b0d-7634-45e7-97f5-4186cd13a2d1" />
+
+<img width="405" height="102" alt="19" src="https://github.com/user-attachments/assets/269e74c7-b7c2-4d05-b9e3-ccae3376e069" />
 
 ---
 
 # Task 6 – Types of Phishing
 
-The file **email13.eml** was analyzed to identify the phishing attempt.
+This task introduced different types of phishing attacks and included an investigation of email3.eml.
+
+## Answers
+```text
+Home Depot
+support@teckbe.com
+103[.]234[.]236[.]83
+atlas102.free.mail.gq1.yahoo.com
+```
 
 ### Findings
 
@@ -133,22 +152,26 @@ The file **email13.eml** was analyzed to identify the phishing attempt.
 |--------|---------|
 | Spoofed Organization | Home Depot |
 | Sender Email | support@teckbe.com |
-| X-Originating-IP | 103.234.236.83 |
+| Defanged X-Originating-IP | 103[.]234[.]236[.]83 |
 | Authentication Server | atlas102.free.mail.gq1.yahoo.com |
 
-### Screenshot
+<img width="928" height="861" alt="26" src="https://github.com/user-attachments/assets/2e5cf69e-d5b1-417a-939d-6b4dcebcfc2f" />
 
-<img width="862" height="483" alt="24" src="https://github.com/user-attachments/assets/d0bc7c27-86a0-47ce-8023-240958f2d660" />
+<img width="942" height="843" alt="27" src="https://github.com/user-attachments/assets/4976fbe4-5dbf-4426-8c1e-28f61fe3df64" />
 
-<img width="965" height="326" alt="25" src="https://github.com/user-attachments/assets/c543b110-03e8-4403-9a51-f3bc27379f38" />
+<img width="932" height="851" alt="28" src="https://github.com/user-attachments/assets/41c2efad-c854-40e3-bf7e-d1dd8d7d4a7d" />
+
+<img width="862" height="483" alt="24" src="https://github.com/user-attachments/assets/9fd19871-86f7-4bed-b3b8-fc39a043fbea" />
+
+<img width="965" height="326" alt="25" src="https://github.com/user-attachments/assets/f5559474-d5b0-441c-b0ae-d480a72c81d2" />
 
 ---
 
 # Task 7 – Conclusion
 
-This task introduced Business Email Compromise (BEC), a phishing technique where attackers use compromised email accounts to deceive employees into performing fraudulent actions.
+This task introduced Business Email Compromise (BEC), which is a phishing attack where attackers use a compromised email account to trick employees into fraud.
 
-### Answer
+## Answer
 
 ```text
 Business Email Compromise
@@ -161,15 +184,17 @@ Business Email Compromise
 ---
 
 # Key Lessons Learned
-
-- Email headers provide valuable forensic information.
-- Attachments should always be treated with caution.
-- Base64 encoded content can conceal malicious files.
-- Authentication results help verify sender legitimacy.
-- Phishing attacks frequently use social engineering techniques.
+- Email addresses should be checked carefully to identify suspicious domains.
+- Email delivery involves SMTP, DNS, and IMAP.
+- Email headers contain important metadata such as X-Originating-IP and Authentication-Results.
+- Email bodies may contain suspicious links or encoded attachments.
+- Base64 encoding can be used to hide attachment content.
+- CyberChef can be used to decode encoded email content.
+- Phishing attacks can impersonate trusted organizations such as Home Depot.
+- Business Email Compromise is a serious phishing technique used for fraud.
 
 ---
 
 # Conclusion
 
-This lab provided practical experience in phishing email analysis. Through examining email headers, email sources, attachments, and authentication mechanisms, phishing indicators were successfully identified. The exercise demonstrated the importance of email analysis in cybersecurity investigations and phishing detection.
+This lab provided hands-on experience in phishing analysis fundamentals. By analyzing email addresses, delivery protocols, headers, email bodies, attachments, and phishing types, I gained a better understanding of how phishing emails are investigated. The exercise also showed the importance of examining metadata, suspicious attachments, and sender information before trusting any email.
